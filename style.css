@@ -1,0 +1,697 @@
+/* Top Container */
+.top-container {
+    background-color: #87ceeb;
+    position: relative;
+    padding-top: 80px;
+}
+
+.mountain {
+    width: 100%;
+}
+
+.sun {
+    width: 10%;
+    margin-left: 30px;
+    position: relative;
+    animation: moveSun 3s linear infinite alternate;
+}
+
+/* key frame */
+@keyframes moveSun {
+    0% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(15px); 
+    }
+}
+  
+
+.higher-cloud {
+    width: 10%;
+    position: absolute;
+    right: 200px;
+    top: 20px;
+    animation: moveCloudTop 10s linear infinite alternate;
+}
+
+.lower-cloud {
+    width: 10%;
+    position: absolute;
+    left: 200px;
+    animation: moveCloudBot 8s linear infinite alternate;
+}
+
+/* key frames */
+@keyframes moveCloudTop {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(150px); /* End position */
+    }
+}
+
+@keyframes moveCloudBot {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(150px); /* End position */
+    }
+}
+/* key frames */
+
+.title-text {
+    text-align: center;
+    color: #07658a;
+}
+
+.title-text > h1 {
+    font-family: "freestyle script";
+}
+
+#name-animated {
+    font-weight: 500;
+    font-size: 4.5em;
+}
+
+#name-animated .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.title-h2 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+}
+
+.title-h2 .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 2px;
+    width: 100%;
+    background-color: #402d2d;
+}
+
+.title-text > h2 {
+    font-family: "Avenir";
+}
+
+
+/* Mid Container */
+.profile {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.profile > img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    animation: fadeIn 7s;
+}
+
+.profile > img:hover {
+    border-radius: 0;
+}
+
+/* key frame for the animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* key frames */
+
+
+.profile > h2 {
+    margin: 30px 0;
+    color: #089c9e;
+    font-family: "Libre Baskerville", "serif";
+    font-size: 3rem;
+}
+
+.hello .letters {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    line-height: 0.7em;
+    right: -0.12em;
+    top: -0.2em;
+}
+
+.hello .bang {
+    font-size: 1.4em;
+    top: auto;
+    left: -0.06em;
+}
+
+.profile > p {
+    font-weight: bold;
+    font-size: 25px;
+    width: 30%;
+    margin:auto ;
+    font-family: "Avenir";
+    letter-spacing: 1px;
+}
+
+.skills {
+    margin: 20px 0;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    color: #089c9e;
+    margin: 150px 0 0 0;
+    font-family: "Space Mono", "monospace";
+}
+
+.t-skills-t .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+  
+
+.t-skills-t .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.profile h3 {
+    font-family: "Space Mono", "monospace";
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#html .word, 
+#css .word,
+#js .word,
+#python .word,
+#mysql .word,
+#bootstrap .word,
+#git .word,
+#github .word {
+    display: inline-block;
+    line-height: 1em;
+}
+/* I did not optimize this as for the '.img-transition' below, to test out different ways of writing css. */
+
+.word {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+
+.img-transition {
+    transition: 0.5s;
+}
+
+.img-transition:hover {
+    transform: scale(1.3);
+}
+
+
+.soft-skills-title {
+    position: relative;
+}
+
+.soft-skills-title .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+  
+.soft-skills-title .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+.soft-skill {
+    font-family: "Space Mono", "monospace";
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.soft-skill:hover {
+    transform: scale(1.25);
+    background: linear-gradient(to right, #089C9E 10%, #9E5B08 40%, #9E2608 60%, #1C3333 80%, #33291C 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 2s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Education section */
+#h-school-img {
+    padding-right: 2.5em;
+}
+
+.education h4 {
+    font-family: "Libre Baskerville", "serif";
+    font-weight: bold;
+}
+
+.bottom-container > .container > h2 {
+    font-family: "Libre Baskerville", "serif";
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+
+}
+
+/* Work experience section */
+.work-experience-title {
+    text-align: center;
+    font-family: "Avenir";
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+.box {
+  width: 400px;
+  margin: 0 auto;
+  padding: 1.5px;
+  padding-right: 2px;
+  background-color: #000000; 
+  background-image: url(./images/black_image.png),  url(./images/black_image.png), url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-position:top center, center center;
+  -webkit-animation: drawBorderFromCenter 4s infinite;
+}
+
+/* review this keyframe */
+@keyframes drawBorderFromCenter {
+    0% {
+        background-size: 0 2px, 0 2px, 100% 100%;
+    }
+    20% {
+        background-size: 100% 2px, 100% 2px, 100% 100%;
+    }
+    66% {
+        background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99% {
+        background-size: 100% 2px, 100% 98%, 0 2px;
+        
+    }
+}
+
+.content
+{
+  background: white;
+  padding: 2em;
+  text-align: center;
+}
+
+.job-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40vh; 
+    margin: auto;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* 1st image*/
+#container-one {
+    background-image: url("./images/swimming.png");
+}
+
+ /* 2nd image */
+ #container-two {
+    background-image: url(./images/army.png);
+    background-position: center 30%;
+}
+
+/* 3rd image */
+#container-three {
+    background-image: url(./images/cabincrew.png);
+    background-position: center 70%;
+}
+
+#container-four {
+    background-image: url(./images/swimming-instructor.png);
+}
+/* Hover effects are in @media few scrools below.  */
+	
+.job-paragraph {
+	display: block;
+	position: relative;
+	font-family: "Libre Baskerville", "serif", serif;
+	font-weight: 400;
+	font-size: 2vw;
+}
+
+.jobs-span {
+    display: inline-block;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.897); 
+    margin: 0;
+    position: relative;
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        overflow: hidden;
+        width: 0%;
+        white-space: pre;
+        content: attr(data-text);
+        -webkit-text-stroke: 2px rgb(63, 63, 63); 
+        will-change: width;
+        animation: grow 7s cubic-bezier(0.86, 0, 0.07, 1) 2.15s infinite alternate;
+        background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+.date {
+    color: #ffffff;
+    font-family: "Libre Baskerville", "serif"; 
+    font-weight: bold;
+    border: 4px solid #ffffff; 
+    padding: 5px;
+    letter-spacing: 3px; 
+}
+
+@keyframes grow {
+  0%,10%,90%,100% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+/* Media Queries for Responsiveness */
+/* For medium-sized screens */
+@media (min-width: 481px) and (max-width: 1200px) {
+    /* 2nd image-hover */
+    #container-two {
+        background-image: url(./images/army.png);
+        background-position: center 30%;
+    }
+    #container-two:hover {
+        background-image: url(./images/army.png);
+        height: 40vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+
+    #container-two:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+    }
+
+    /* 3rd image-hover */
+    #container-three {
+        background-image: url(./images/cabincrew.png);
+        background-position: center 70%;
+    }
+    
+    #container-three:hover {
+        background-image: url(./images/cabincrew.png);
+        height: 40vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+    
+    #container-three:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+    }
+
+        /* 4th image-hover */
+    #container-four {
+        background-image: url(./images/swimming-instructor.png);
+    }
+}
+
+/* For large-sized screens */
+@media (min-width: 1201px) and (max-width: 1600px) {
+     /* 2nd image-hover */
+    #container-two:hover {
+        background-image: url(./images/army.png);
+        height: 70vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+
+    #container-two:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+    }
+
+     /* 3rd image-hover */
+    #container-three:hover {
+        background-image: url(./images/cabincrew.png);
+        height: 50vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+    
+    #container-three:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+    }
+
+    /* 4th image-hover */
+    #container-four:hover {
+        background-image: url(./images/swimming-instructor.png);
+        height: 50vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+
+    #container-four:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+        
+    }
+}
+
+/* For extra-large screens */
+@media (min-width: 1601px) {
+    /* 2nd image-hover */
+    #container-two {
+        background-image: url(./images/army.png);
+        background-position: center 20%;
+    }
+
+    #container-two:hover {
+        background-image: url(./images/army.png);
+        height: 100vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+
+    #container-two:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+    }
+
+    /* 3rd image-hover */
+    #container-three {
+        background-image: url(./images/cabincrew.png);
+        background-position: center 40%;
+
+    }
+    
+    #container-three:hover {
+        background-image: url(./images/cabincrew.png);
+        height: 67vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+    
+    #container-three:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+    }
+
+    /* 4th image-hover */
+    #container-four:hover {
+        background-image: url(./images/swimming-instructor.png);
+        height: 67vh;
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease;
+    }
+
+    #container-four:not(:hover) {
+        transition: background-image 0.7s ease, background-position 0.7s ease, height 0.7s ease; 
+        
+    }
+
+}
+
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;  
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.contact {
+    font-family: "Avenir";
+    font-size: 35px;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;  
+    margin-bottom: 80px;
+}
+
+.social-icon-item,
+.menu-item {
+  list-style: none;
+}
+
+.social-icon-link {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: 0.5s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-10px);
+}
+
+.menu-item {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+  font-family: "Avenir";
+  
+}
+
+.menu-item:hover {
+  opacity: 1;
+  transform: scale(1.2)
+}
+
+.footer p {
+  position: relative;  
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: "Avenir";
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
